@@ -2,11 +2,11 @@ FROM debian:latest
 MAINTAINER Grammy Jiang <grammy.jiang@gmail.com>
 
 # ENV DEBIAN_MIRROR http://httpredir.debian.org/debian # REDIRECT TO THE FAST MIRROR
-# ENV DEBIAN_MIRROR http://ftp2.cn.debian.org/debian # CHINA
+ENV DEBIAN_MIRROR http://ftp2.cn.debian.org/debian # CHINA
 
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak \
- && echo "deb http://httpredir.debian.org/debian jessie main" > /etc/apt/sources.list \
- && echo "deb http://httpredir.debian.org/debian jessie-updates main" >> /etc/apt/sources.list \
+ && echo "deb $DEBIAN_MIRROR jessie main" > /etc/apt/sources.list \
+ && echo "deb $DEBIAN_MIRROR jessie-updates main" >> /etc/apt/sources.list \
  && echo "deb http://security.debian.org jessie/updates main" >> /etc/apt/sources.list \
  && set -x \
  && apt-get update \
