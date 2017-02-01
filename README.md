@@ -7,20 +7,18 @@ Because of the interactive of `makeall` script, and I don't want to crack it, Do
 
 ## Usage
 1. Run docker build in folder `docker-radiance`:
-```shell
-docker build . -t radiance:5.0
-```
-
+  ```shell
+  docker build . -t radiance:5.0
+  ```
 2. Run it and login to the contain:
-```shell
-docker run -it radiance:5.0
-```
-
+  ```shell
+  docker run -it radiance:5.0
+  ```
 3. Compile:
-```shell
-cd ~/downloads/ray/
-./makeall install clean
-```
+  ```shell
+  cd ~/downloads/ray/
+  ./makeall install clean
+  ```
 
 ## Notice
 1. Let debian choose the fastest mirror to update and install packages, by using `http://httpredir.debian.org/debian` in `/etc/apt/sources.list`.
