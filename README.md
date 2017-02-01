@@ -26,7 +26,8 @@ Because of the interactive of `makeall` script, and I don't want to crack it, Do
   ```
 
 ## Notice
-1. Let debian choose the fastest mirror to update and install packages, by using `http://httpredir.debian.org/debian` in `/etc/apt/sources.list`.
+1. Use debian mirror to accelerate `apt update`, you can let debian choose the fastest mirror to update and install packages, by using `http://httpredir.debian.org/debian` in `/etc/apt/sources.list`, or specified by yourself.
+2. The full package of Radiance is really large (more then 170MB), it takes me more than 90 minutes to download. It is STRONGLY recommanded downloading the package outside the docker and use `COPY` to copy into image.
 
 ## Related Links:
 - [Radiance WWW Server](http://radsite.lbl.gov/radiance/HOME.html)
