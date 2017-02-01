@@ -1,7 +1,10 @@
 FROM debian:latest
 MAINTAINER Grammy Jiang <grammy.jiang@gmail.com>
 
-# ENV DEBIAN_MIRROR http://httpredir.debian.org/debian # REDIRECT TO THE FAST MIRROR
+# Auto redirect to the fastest mirror
+# ENV DEBIAN_MIRROR http://httpredir.debian.org/debian
+
+# China
 ENV DEBIAN_MIRROR http://ftp2.cn.debian.org/debian
 
 RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak \
