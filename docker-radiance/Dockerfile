@@ -24,4 +24,5 @@ RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak \
 RUN set -x \
  && mkdir -p /root/downloads/ \
  && cd /root/downloads/ \
- && curl -sSL http://radsite.lbl.gov/radiance/dist/rad5R0all.tar.gz | tar xf
+ && curl -sSL http://radsite.lbl.gov/radiance/dist/rad5R0all.tar.gz -o rad5R0all.tar.gz \
+ && tar xf rad5R0all.tar.gz
