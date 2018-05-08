@@ -1,4 +1,4 @@
-FROM debian:latest@sha256:c908a4fcb2b2a1953bd40ebc12d9a4116868d72540efc27502ee6c2395b8a1e9
+FROM debian:latest@sha256:7df746b3af67bbe182a8082a230dbe1483ea1e005c24c19471a6c42a4af6fa82
 MAINTAINER Grammy Jiang <grammy.jiang@gmail.com>
 
 # Auto redirect to the fastest mirror
